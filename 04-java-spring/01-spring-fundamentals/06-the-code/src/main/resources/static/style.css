@@ -1,0 +1,23 @@
+@charset "ISO-8859-1";
+
+div {
+	padding-top: 20px;
+	text-align: center;
+}
+input {
+	width:10%;
+	height: 20px;
+}
+button {
+  	background: #73AD21;
+  	padding: 10px 20px;
+	font-weight: bold;
+}
+p {
+	color:red;
+	font-size: large;
+}
+ul {
+	display: inline-block; 
+	text-align: left; 
+}
