@@ -1,0 +1,18 @@
+@charset "ISO-8859-1";
+body {
+	background-color: #f2f2f2;
+}
+#date {
+        color: blue;
+        text-align: center;
+        padding-top: 50px;
+}
+#time {
+        color: green;
+        text-align: center;
+        padding-top: 50px;
+}
+.index {
+  margin: 300px;
+  display: inline;
+}
