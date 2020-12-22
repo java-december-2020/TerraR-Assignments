@@ -1,0 +1,30 @@
+@charset "ISO-8859-1";
+
+form {
+  border: 3px solid black;
+  width: 27%;
+  padding: 15px;
+  margin-left: 400px;
+}
+label {
+	width: 150px;
+	display: inline-block;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+input {
+	width: 200px;
+}
+select {
+	width: 208px;
+}
+textarea {
+	width: 355px;
+}
+button {
+  	margin-left: 75%;
+  	background: #a4e1ed;
+  	color: white;
+  	padding: 10px 20px;
+	font-weight: bold;
+}
