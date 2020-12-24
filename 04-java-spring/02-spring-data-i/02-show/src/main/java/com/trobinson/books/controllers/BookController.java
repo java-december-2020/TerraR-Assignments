@@ -30,7 +30,7 @@ public class BookController {
     
     @GetMapping("/books/{id}")
     public String findBookByIndex(@PathVariable("id") Long id, Model viewModel) {
-        Book book = bService.getSingleBook(id);
+    	Book book = bService.getSingleBook(id);
         viewModel.addAttribute("book", book);
         return "showBook.jsp";
     }
@@ -49,5 +49,19 @@ public class BookController {
            return "redirect:/books";
        }
    }
+   
+   @GetMapping("/books/edit/{id}")
+   public String editBook(@PathVariable("id") Long id, Model viewModel) {
+       Book book = bService.getSingleBook(id);
+       if (book != null){
+           viewModel.addAttribute("book", book);
+           return "editBook.jsp";
+       }else{
+           return "redirect:/books";
+       }
+   }
+
+   
+   
     
 }
