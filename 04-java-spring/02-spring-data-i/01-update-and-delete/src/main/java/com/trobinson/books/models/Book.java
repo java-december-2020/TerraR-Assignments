@@ -51,6 +51,14 @@ public class Book {
 	public Book() {
 	}
 
+	// Overloaded Constructor
+    public Book(String title, String description, String language, int numberOfPages) {
+		this.title = title;
+		this.description = description;
+		this.language = language;
+		this.numberOfPages = numberOfPages;
+	}
+
 	// Created and Updated Date Methods
     @PrePersist
     protected void onCreate(){
@@ -117,5 +125,5 @@ public class Book {
 
 	public void setUpdatedAt(Date updatedAt) {
 		this.updatedAt = updatedAt;
-	}		
+	}	
 }
