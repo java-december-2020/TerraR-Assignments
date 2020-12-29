@@ -1,0 +1,40 @@
+@charset "ISO-8859-1";
+
+.container {
+	margin-top: 50px;
+}
+a:link {
+  text-decoration: underline;
+}
+.landing {
+	margin-left: 125px;
+}
+.nav-spacer {
+	margin-left: 500px;
+}
+.nav-item {
+	padding-left: 40px;
+	padding-right: 40px;
+}
+.nav {
+	padding-bottom: 30px;
+}
+.table-striped, #topten {
+	border: 2px solid #C8C8C8;
+}
+td, th {
+	border-left: 2px solid #C8C8C8;
+}
+#topten {
+	display: inline-block;
+	padding: 15px;
+}
+.td-spacer {
+	padding: 15px;
+}
+label {
+	width: 15%;
+}
+.addbtn {
+	margin-left: 300px;
+}
