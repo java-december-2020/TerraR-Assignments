@@ -1,0 +1,29 @@
+@charset "ISO-8859-1";
+
+.container {
+	margin-top: 50px;
+}
+a:link {
+  text-decoration: underline;
+}
+.table-striped {
+	border: 2px solid #C8C8C8;
+}
+td, th {
+	border-left: 2px solid #C8C8C8;
+}
+th {
+	background-color: #D8D8D8;
+}
+.td-spacer {
+	padding: 15px;
+}
+label {
+	width: 15%;
+}
+.createbtn {
+	margin-left: 170px;
+	margin-top: 25px;
+	width: 125px;
+
+}

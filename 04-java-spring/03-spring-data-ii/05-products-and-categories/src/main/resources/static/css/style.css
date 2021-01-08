@@ -1,0 +1,47 @@
+@charset "ISO-8859-1";
+
+.container {
+	margin-top: 50px;
+
+}
+.box {
+	margin-top: 15px;
+	vertical-align: top;
+	width: 30%	
+}
+#right-box {
+	margin-top: 30px;
+}
+
+a:link {
+  text-decoration: underline;
+}
+.table-striped {
+	border: 2px solid #C8C8C8;
+}
+td, th {
+	border-left: 2px solid #C8C8C8;
+}
+th {
+	background-color: #D8D8D8;
+}
+.td-spacer {
+	padding: 15px;
+}
+#update-label {
+	width: 40%;
+}
+.labelAlign {
+	width: 100px;
+	display: inline-block;
+	vertical-align: top;
+}
+.addbtn {
+	margin-left: 180px;
+	margin-top: 50px;
+}
+.createbtn {
+	margin-left: 100px;
+	margin-top: 25px;
+	width: 125px;
+}
