@@ -53,7 +53,7 @@ public class HomeController {
 	@PostMapping("/persons/new")
 	public String addPerson(@Valid @ModelAttribute("person") Person person, BindingResult result) {
 		if (result.hasErrors()) {
-			return "/new_person.jsp";
+			return "new_person.jsp";
 		} else {
 			pService.createPerson(person);
 			return "redirect:/";
@@ -65,14 +65,14 @@ public class HomeController {
 	public String addNewLicense(@ModelAttribute("license") License license, @ModelAttribute("person") Person person, Model viewModel) {
 		List<Person> persons = pService.getUnlicensedPeople();
 		viewModel.addAttribute("person", persons);
-		return "/new_license.jsp";
+		return "new_license.jsp";
 	}
 	
 	// Add new license
 	@PostMapping("/licenses/new")
 	public String addLicense(@Valid @ModelAttribute("license") License license, BindingResult result, Model viewModel) {
 		if (result.hasErrors()) {
-		return "/new_license.jsp";
+		return "new_license.jsp";
 	} else {
 		lService.createLicense(license);
 		return "redirect:/";
@@ -84,7 +84,7 @@ public class HomeController {
 	public String getDetails(@PathVariable("id") Long id, Model viewModel) {
 		viewModel.addAttribute("person", pService.getSinglePerson(id));
 		viewModel.addAttribute("license", lService.getSingleLicense(id));
-		return "/details.jsp";
+		return "details.jsp";
 	}
 	
 	

@@ -51,7 +51,7 @@ public class HomeController {
 	@PostMapping("/products/new")
 	public String addProduct(@Valid @ModelAttribute("product") Product product, BindingResult result) {
 		if (result.hasErrors()) {
-			return "/new_product.jsp";
+			return "new_product.jsp";
 		} else {
 			pService.createProduct(product);
 			return "redirect:/";
@@ -62,14 +62,14 @@ public class HomeController {
 	// Add category
 	@GetMapping("/categories/new")
 	public String displayAddNewCategory(@ModelAttribute("category") Category category) {
-		return "/new_category.jsp";
+		return "new_category.jsp";
 	}
 	
 	// Post category
 	@PostMapping("/categories/new")
 	public String addCategory(@Valid @ModelAttribute("category") Category category, BindingResult result) {
 		if (result.hasErrors()) {
-		return "/new_category.jsp";
+		return "new_category.jsp";
 	} else {
 		cService.createCategory(category);
 		return "redirect:/";
@@ -83,7 +83,7 @@ public class HomeController {
 		viewModel.addAttribute("product", pService.findOneProduct(id));
 		List<Category> categories = cService.findAllCategories();
 		viewModel.addAttribute("category", categories);
-		return "/update_product.jsp";
+		return "update_product.jsp";
 	}
 
 	// Post category to project
@@ -102,7 +102,7 @@ public class HomeController {
 		viewModel.addAttribute("category", cService.findOneCategory(id));
 		List<Product> products = pService.findAllProducts();
 		viewModel.addAttribute("product", products);
-		return "/update_category.jsp";
+		return "update_category.jsp";
 	}
 
 	// Post product to category

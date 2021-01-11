@@ -47,7 +47,7 @@ public class HomeController {
 	@PostMapping("/dojos/new")
 	public String addDojo(@Valid @ModelAttribute("dojo") Dojo dojo, BindingResult result) {
 		if (result.hasErrors()) {
-			return "/new_dojo.jsp";
+			return "new_dojo.jsp";
 		} else {
 			dService.createDojo(dojo);
 			return "redirect:/";
@@ -60,14 +60,14 @@ public class HomeController {
 	public String displayAddNewNinja(@ModelAttribute("ninja") Ninja ninja, @ModelAttribute("dojo") Dojo dojo, Model viewModel) {
 		List<Dojo> dojos = dService.findAllDojos();
 		viewModel.addAttribute("dojo", dojos);
-		return "/new_ninja.jsp";
+		return "new_ninja.jsp";
 	}
 	
 	// Add new ninja
 	@PostMapping("/ninjas/new")
 	public String addNinja(@Valid @ModelAttribute("ninja") Ninja ninja, BindingResult result, Model viewModel) {
 		if (result.hasErrors()) {
-		return "/new_ninja.jsp";
+		return "new_ninja.jsp";
 	} else {
 		nService.createNinja(ninja);
 		return "redirect:/";
@@ -78,7 +78,7 @@ public class HomeController {
 	@GetMapping("/dojos/{id}")
 	public String getDetails(@PathVariable("id") Long id, Model viewModel) {
 		viewModel.addAttribute("dojo", dService.findOneDojo(id));
-		return "/details.jsp";
+		return "details.jsp";
 	}	
 	
 	
