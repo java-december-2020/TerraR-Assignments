@@ -1,0 +1,47 @@
+@charset "ISO-8859-1";
+
+.container {
+	margin-top: 50px;
+}
+a:link {
+  text-decoration: underline;
+}
+.link {
+	float: right;
+}
+.table-striped {
+	border: 2px solid #C8C8C8;
+}
+td, th {
+	border-left: 2px solid #C8C8C8;
+}
+th {
+	background-color: #D8D8D8;
+}
+.errors {
+	color: red;
+}
+.box {
+	margin-top: 15px;
+	vertical-align: top;
+	width: 40%	
+}
+#left-box {
+	box-sizing: border-box;
+	margin-top: 34px;
+}
+#right-box {
+	box-sizing: border-box;
+	margin-left: 50px;
+}
+.answerh3 {
+	margin-right: 40px;
+}
+.borderlist {
+    list-style-position:inside;
+    border: 1px solid #D0D0D0;
+    margin-right: 20px;
+    list-style-type: none;
+    padding: 5px 15px 5px 15px;
+    border-radius: 3px;
+}
