@@ -6,6 +6,7 @@ import org.springframework.validation.Errors;
 import com.trobinson.events.models.User;
 import com.trobinson.events.repositories.UserRepository;
 
+@Component
 public class UserValidator {
 
 	@Autowired

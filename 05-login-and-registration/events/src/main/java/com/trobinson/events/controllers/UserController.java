@@ -27,8 +27,8 @@ public class UserController {
 	@Autowired
     private UserService uService;
 	
-//	@Autowired
-//	private UserValidator validator;
+	@Autowired
+	private UserValidator validator;
     
 	// Register or Login User
     @GetMapping("/")
@@ -43,7 +43,7 @@ public class UserController {
     // Process Registration
     @PostMapping("/registration")
     public String registerUser(@Valid @ModelAttribute("user") User user, BindingResult result, HttpSession session) {
-//    	validator.validate(user, result);
+    	validator.validate(user, result);
 		if (result.hasErrors()) {
 			return "index.jsp";
 		} else {
